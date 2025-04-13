@@ -2,3 +2,150 @@
 @import url(../style/rest.css);
 @import url(../style/global.css);
 @import url(../style/nav.css);
+#hero{
+    background-color: var(--bg-color);
+    padding-top: 5rem;
+}
+.hero-banner{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    gap: 2rem;
+}
+.hero-banner .hero-banner-txt{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
+    height: fit-content;
+}
+.hero-banner-txt .collection{
+    position: relative;
+}
+.hero-banner-txt .collection::before{
+    content: "";
+    position: absolute;
+    width: 0.125rem;
+    height: 100%;
+    left: 0;
+    background-color: var(--light-txt-color);
+}
+.hero-banner-txt p{
+    color: var(--light-txt-color);
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    margin-left: 2rem;
+}
+.hero-banner-txt h1{
+    font-size: 3.75rem;
+}
+.hero-banner-txt .discover{
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+.hero-banner-txt .discover a{
+    color: var(--txt-color);
+    text-transform: capitalize;
+    font-size: 1.25rem;
+    font-family: roboto-bold;
+    transition: .4s;
+}
+.discover:hover a, .discover:hover{
+    color: var(--hover-color);
+}
+.hero-banner-img .chair-img{
+    position: relative;
+    width: 40%;
+    z-index: 1;
+}
+.hero-banner-img .chair-img::after{
+    content: "";
+    position: absolute;
+    width: 32.5rem;
+    height: 32.5rem;
+    background-color: var(--second-bg-color);
+    border-radius: 50%;
+    top: 0;
+    z-index: -1;
+}
+.hero-banner-img .chair-img img{
+    padding-top: 8rem;
+    padding-left: 8rem;
+}
+
+@media (max-width:1024px) {
+    .hero-banner{
+        width: 95%;
+        margin: auto;
+    }
+    .hero-banner-txt h1{
+        font-size: 3rem;
+    }
+    .hero-banner-img .chair-img::after{
+        content: "";
+        position: absolute;
+        width: 28rem;
+        height: 28rem;
+    }
+    .hero-banner-img .chair-img img{
+        padding-top: 4rem;
+        padding-left: 4rem;
+    }
+}
+@media (max-width:768px) {
+    .hero-banner{
+        gap: 0;
+    }
+    .hero-banner-txt{
+        width: 50%;
+        z-index: 1;
+    }
+    .hero-banner-txt h1{
+        font-size: 2.5rem;
+    }
+    .hero-banner-img .chair-img::after{
+        content: "";
+        position: absolute;
+        width: 25rem;
+        height: 25rem;
+    }
+    .hero-banner-img .chair-img img{
+        width: 22rem;
+        height: 28rem;
+        
+    }
+}
+@media (max-width:768px) {
+    .hero-banner{
+        gap: 0;
+    }
+    .hero-banner-txt{
+        width: 50%;
+        z-index: 1;
+    }
+    .hero-banner-txt h1{
+        font-size: 2.5rem;
+    }
+    .hero-banner-img .chair-img::after{
+        content: "";
+        position: absolute;
+        width: 25rem;
+        height: 25rem;
+    }
+    .hero-banner-img .chair-img img{
+        width: 22rem;
+        height: 28rem;
+        
+    }
+}
+@media (max-width:425px) {
+    html{
+        font-size: 14px;
+    }
+    .hero-banner-txt{
+        width: 100%;
+        z-index: 1;
+    }
+}

@@ -1,8 +1,9 @@
 :root{
     --txt-color:#111;
+    --white-color:#fff;
     --light-txt-color:#999;
     --hover-color:#dcb14a;
-    --bg-color:#888;
-    --second-bg-color:#cfe2ff;
+    --bg-color:#f1f1f1;
+    --second-bg-color:#e3eaea;
     --offer-color:#f14705;
 }
