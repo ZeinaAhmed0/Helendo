@@ -15,10 +15,6 @@ html{
     font-family: roboto-regular;
     scroll-behavior: smooth;
 }
-.container{
-    width: 90%;
-    margin: auto;
-}
 h1, h2, h3, h4, h5, h6, p, span, button, li{
     text-transform: capitalize;
 }

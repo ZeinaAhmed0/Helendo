@@ -6,8 +6,8 @@
 ul{
     list-style: none;
 }
-a{
-    text-decoration: none;
+li a, a{
+    text-decoration: none !important; 
 }
 p{
     line-height: 1.7rem;
