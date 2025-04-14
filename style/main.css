@@ -125,3 +125,11 @@
         height: 24rem;
     }
 }
+@media (max-width:320px) {
+    html{
+        font-size: 10px;
+    }
+    .hero-banner-img{
+        left: -25rem;
+    }
+}
