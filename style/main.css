@@ -2,9 +2,11 @@
 @import url(../style/rest.css);
 @import url(../style/global.css);
 @import url(../style/nav.css);
+/* hero banner css start */
 #hero{
     background-color: var(--bg-color);
     padding-top: 5rem;
+    position: relative;
 }
 .hero-banner-content{
     width: 90%;
@@ -35,6 +37,9 @@
 .hero-banner-txt .discover{
     gap: 0.625rem;
 }
+.hero-banner-txt .discover img{
+    width: 1.125rem;
+}
 .hero-banner-txt .discover a{
     color: var(--txt-color);
     text-transform: capitalize;
@@ -42,7 +47,7 @@
     font-family: roboto-bold;
     transition: .4s;
 }
-.discover:hover a, .discover:hover{
+.discover:hover a, .discover:hover, .discover:hover img{
     color: var(--hover-color);
 }
 .hero-banner-img{
@@ -68,12 +73,77 @@
     font-size: 3.25rem;
     top: 35%;
 }
-@media (max-width:1024px) {
+/* hero banner css end */
+/* banner box css start */
+#banner-box{
+    background:  var(--white-color) !important;
+    margin-left: 6rem !important;
+    position: absolute;
+    top: 50rem;
+    z-index: 10;
+}
+.banner-card{
+    background-color: var(--white-color);
+    padding-top: 2rem !important;
+}
+.banner-box-img{
+    width: 100%;
+    height: 100%;
+}
+.banner-box-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.first-box{
+    padding-left: 2rem !important;
+}
+.second-box{
+    padding-right: 2rem !important;
+}
+.first-box .first-txt-box{
+    top: 5.5rem;
+    left: 5rem;
+}
+.second-box .second-txt-box{
+    top: 5.5rem;
+    left: 39rem;
+}
+.banner-box-txt a{
+    font-size: 2rem;
+}
+.banner-box-txt h6{
+    font-size: 1.3rem;
+}
+.banner-btn a{
+    font-size: 1.2rem;
+}
+.banner-box-txt a , .banner-box-txt h6{
+    color: var(--txt-color);
+    transition: .4s;
+}
+.banner-btn img{
+    width: 1.125rem;
+}
+.banner-box-txt h3 a:hover{
+    color: var(--hover-color);
+}
+.banner-card:hover .banner-btn img ,.banner-card:hover .banner-btn a{
+    opacity: .7;
+}
+/* banner box css end */
+/* products css start */
+
+/* media query start */
+@media (max-width:1024px){
     .hero-banner-content{
         width: 100%;
     }
     .hero-banner-txt h1{
         font-size: 3rem;
+    }
+    .hero-banner-img{
+        height: 40rem;
     }
     .hero-banner-img .chair-img{
         top: 5rem;
@@ -93,6 +163,17 @@
         top: 30%;
         z-index: 3;
     }
+    #banner-box{
+        position: relative;
+        top: 0;
+        margin: 0 !important;
+    }
+    .first-box .first-txt-box{
+        left: 6rem;
+    }
+    .second-box .second-txt-box{
+        left: 35rem;
+    }
 }
 @media (max-width:768px){
     .hero-banner-content{
@@ -103,6 +184,16 @@
     }
     .hero-banner-img{
         left: -6rem;
+    }
+    #banner-box .container-md{
+        padding: 0 !important;
+        margin: auto !important;
+    }
+    .first-box .first-txt-box{
+        left: 5rem;
+    }
+    .second-box .second-txt-box{
+        left: 30rem;
     }
 }
 @media (max-width:425px) {
@@ -123,6 +214,32 @@
     .hero-banner-img .chair-img img{
         width: 16.583rem;
         height: 24rem;
+    }
+    .banner-box-content{
+        margin: 0 !important;
+    }
+    .first-box{
+        padding: 2rem !important;
+        padding-bottom: 0 !important;
+    }
+    .second-box{
+        padding: 2rem !important;
+    }
+    .first-box .first-txt-box{
+        left: 4rem;
+    }
+    .second-box .second-txt-box{
+        top: 26rem;
+        left: 4rem;
+    }
+    .banner-box-txt a{
+        font-size: 2.5rem;
+    }
+    .banner-box-txt h6{
+        font-size: 1.6rem;
+    }
+    .banner-btn a{
+        font-size: 1.4rem;
     }
 }
 @media (max-width:375px) {
