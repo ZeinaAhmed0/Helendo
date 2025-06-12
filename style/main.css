@@ -36,6 +36,7 @@
 }
 .hero-banner-txt .discover{
     gap: 0.625rem;
+    transition: .4s;
 }
 .hero-banner-txt .discover img{
     width: 1.125rem;
@@ -75,12 +76,11 @@
 }
 /* hero banner css end */
 /* banner box css start */
-#banner-box{
+.banner-box-content{
     background:  var(--white-color) !important;
-    margin-left: 6rem !important;
-    position: absolute;
-    top: 50rem;
-    z-index: 10;
+    height: 50vh;
+    position: relative;
+    top: -10rem;
 }
 .banner-card{
     background-color: var(--white-color);
@@ -101,13 +101,9 @@
 .second-box{
     padding-right: 2rem !important;
 }
-.first-box .first-txt-box{
-    top: 5.5rem;
-    left: 5rem;
-}
-.second-box .second-txt-box{
-    top: 5.5rem;
-    left: 39rem;
+.banner-box-txt{
+    top: 0;
+    padding: 5rem 3rem;
 }
 .banner-box-txt a{
     font-size: 2rem;
@@ -133,7 +129,270 @@
 }
 /* banner box css end */
 /* products css start */
-
+.products-navbar-content h3{
+    color: var(--txt-color);
+    font-size: 2rem;
+}
+.nav-item a{
+    color: var(--txt-color);
+    font-family: roboto-medium;
+}
+.nav-item .active{
+    color: var(--light-txt-color);
+}
+.icons-bg{
+    width: 16rem;
+    height: 16rem;
+    position: absolute;
+    transition: .4s;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem;
+    background-color: rgba(0,0,0, .2);
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+.product-card:hover .icons-bg{
+    opacity: 1;
+    visibility: visible;
+}
+.icon-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    gap: 1rem;
+    bottom: -3rem;
+    transition: .4s linear;
+}
+.product-card:hover .icon-box{
+    bottom: 6.5rem;
+}
+.icons-bg .icon{
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    width: 3rem;
+    height: 3rem;
+    bottom: -30rem;
+}
+.products-img{
+    width: 16rem;
+    height: 16rem;
+}
+.products-img img{
+    width: 100%;
+    height: 100%;
+}
+.product-txt span{
+    color: var(--light-txt-color);
+}
+.right-arrow{
+    top: 35%;
+    right: 0%;
+}
+.left-arrow{
+    top: 35%;
+    left: 0%;
+}
+/* products css end */
+/* interior collection css start */
+#interior-collection{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 3rem;
+}
+.interior-collection-img{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.interior-collection-img img{
+    width: 140%;
+    object-fit:cover;
+    scale: 1.6;
+}
+.interior-collection-txt{
+    position: absolute;
+    z-index: 20;
+    padding: 6rem 5rem;
+}
+.interior-collection-txt h1{
+    font-size: 3rem;
+}
+.interior-collection-txt span{
+    color: red;
+}
+.interior-collection-txt p{
+    color: black;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.interior-collection-txt .discover{
+    gap: 0.625rem;
+    padding: 2rem 0rem;
+    transition: .4s;
+}
+.interior-collection-txt .discover img{
+    width: 1.125rem;
+}
+.interior-collection-txt .discover a{
+    color: var(--txt-color);
+    text-transform: capitalize;
+    font-size: 1.25rem;
+    font-family: roboto-bold;
+    transition: .4s;
+}
+.interior-collection-txt .discover:hover a,.interior-collection-txt .discover:hover,.interior-collection-txt .discover:hover img{
+    color: var(--hover-color);
+}
+/* interior collection css end */
+/* latest css start */
+#latest .discover{
+    gap: 0.625rem;
+    padding: 2rem 0rem;
+    transition: .4s;
+}
+#latest .discover img{
+    width: 1.125rem;
+}
+#latest .discover a{
+    color: var(--txt-color);
+    text-transform: capitalize;
+    font-size: 1.25rem;
+    font-family: roboto-bold;
+    transition: .4s;
+}
+#latest .discover:hover a, #latest .discover:hover, #latest .discover:hover img{
+    color: var(--hover-color);
+}
+.latest-img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.latest-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.latest-card{
+    position: relative;
+    transition: .4s linear;
+}
+.latest-card:hover::after{
+    content: "read more +";
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-family: roboto-regular;
+    text-transform: capitalize;
+    width: 7rem;
+    height: 2.5rem;
+    padding: .5rem;
+    background-color: white;
+    bottom: 37%;
+    right: 0;
+    z-index: 10;
+    cursor: pointer;
+}
+.latest-txt p a{
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.line-after::after{
+    content: "";
+    position: absolute;
+    background-color: var(--light-txt-color);
+    width: 6rem;
+    height: .15rem;
+}
+.latest-card:hover .line-after::before{
+    content: "";
+    position: absolute;
+    background-color: var(--hover-color);
+    width: 6rem;
+    height: .15rem;
+    z-index: 20;
+    transition: .4s linear;
+}
+.latest-txt span{
+    font-weight: 500;
+}
+.latest-txt .color-txt{
+    color: var(--light-txt-color);
+}
+#brands{
+    margin: 3rem 0;
+}
+.logo-box{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.logo-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    scale: 1.6;
+    opacity: .5;
+    transition: .4s;
+}
+.logo-box:hover img{
+    opacity: 1;
+}
+footer{
+    width: 100%;
+    overflow: hidden;
+    position: static;
+    bottom: 0;
+    background-color: #8888881c;
+    padding: 5rem 3rem;
+    z-index: -1;
+}
+footer h3, footer h5{
+    color: black;
+    font-weight: bold;
+}
+footer i{
+    color: black;
+    transition: .4s;
+    scale: 1.2;
+}
+.social i:hover{
+    color: var(--hover-color);
+}
+.address{
+    padding: .5rem 0;
+    padding-right: 2rem;
+    border-bottom: .1rem solid var(--light-txt-color);
+}
+.address span{
+    color: var(--light-txt-color);
+    font-size: 1.1rem;
+}
+.address i {
+    color: var(--txt-color);
+    opacity: .9;
+}
+footer span span{
+    transition: .4s;
+}
+footer span span:hover{
+    color: var(--hover-color);
+}
+/* latest css end */
 /* media query start */
 @media (max-width:1024px){
     .hero-banner-content{
@@ -168,12 +427,6 @@
         top: 0;
         margin: 0 !important;
     }
-    .first-box .first-txt-box{
-        left: 6rem;
-    }
-    .second-box .second-txt-box{
-        left: 35rem;
-    }
 }
 @media (max-width:768px){
     .hero-banner-content{
@@ -182,18 +435,16 @@
     .hero-banner-txt{
         z-index: 10;
     }
+    .hero-banner-img .chair-img img{
+        width: 20rem;
+        height: 26rem;
+    }
     .hero-banner-img{
         left: -6rem;
     }
     #banner-box .container-md{
         padding: 0 !important;
         margin: auto !important;
-    }
-    .first-box .first-txt-box{
-        left: 5rem;
-    }
-    .second-box .second-txt-box{
-        left: 30rem;
     }
 }
 @media (max-width:425px) {
@@ -224,13 +475,7 @@
     }
     .second-box{
         padding: 2rem !important;
-    }
-    .first-box .first-txt-box{
-        left: 4rem;
-    }
-    .second-box .second-txt-box{
-        top: 26rem;
-        left: 4rem;
+        position: relative;
     }
     .banner-box-txt a{
         font-size: 2.5rem;
