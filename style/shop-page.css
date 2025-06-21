@@ -1,0 +1,122 @@
+.shop-page-nav{
+    background-color: white;
+    border-bottom: .1rem solid #f1f1f1;
+}
+.breadcrumb-area{
+    padding: 5rem 7rem;
+    background-color: var(--bg-color);
+}
+.breadcrumb-area span{
+    color: var(--light-txt-color);
+    text-transform: uppercase;
+}
+.breadcrumb-area h6{
+    transition: .4s linear;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    padding-bottom: .3rem;
+}
+.breadcrumb-area h6::after{
+    content: "";
+    position: absolute;
+    width: 3rem;
+    height: .08em;
+    background-color: var(--light-txt-color);
+    bottom: 0;
+    left: -3rem;
+    transition: .5s linear;
+}
+.breadcrumb-area h6:hover{
+    color: var(--hover-color);
+}
+h6:hover::after{
+    left: 0rem;
+    background-color: var(--hover-color);
+    z-index: 20;
+    transition-delay: .2s;
+}
+.hero-banner{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 2rem;
+}
+.hero-banner-card{
+    position: relative;
+    transition: .4s;
+    cursor: pointer;
+}
+.hero-banner-card-txt{
+    position: absolute;
+    z-index: 20;
+    padding: 2rem;
+    transition: .4s;
+}
+.hero-banner-card:hover .hero-banner-card-txt h4{
+    color: var(--light-txt-color);
+}
+.hero-banner-card:hover .hero-banner-card-txt h6{
+    color: var(--hover-color);
+}
+h4:hover{
+    color: var(--hover-color) !important;
+}
+.hero-banner-card-img{
+    overflow: hidden;
+    transition: .4s;
+}
+.hero-banner-card-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.hero-banner-card:hover .hero-banner-card-img img{
+    scale: 1.1;
+}
+.products-navbar-content p{
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.filter img{
+    width: 1rem;
+    height: 1rem;
+    opacity: .6;
+    cursor: pointer;
+}
+.filter .active{
+    opacity: 1;
+}
+.filter p span{
+    cursor: pointer;
+    transition: .4s;
+}
+.filter p span:hover{
+    color: var(--hover-color);
+}
+.shop-page-footer{
+    background-color: white;
+    width: 90%;
+    margin: auto;
+}
+.shop-page-footer h5{
+    font-weight: 500;
+}
+.shop-page-footer a{
+    cursor: pointer;
+    transition: .4s;
+}
+.shop-page-footer a:hover{
+    color: var(--hover-color) !important;
+}
+.shop-page-footer .security span{
+    transition: .4s;
+    cursor: pointer;
+}
+.shop-page-footer .security span:hover{
+    color: var(--hover-color);
+}
+.shop-page-footer h2{
+    color: black;
+}

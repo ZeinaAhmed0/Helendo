@@ -2,6 +2,7 @@
 @import url(../style/rest.css);
 @import url(../style/global.css);
 @import url(../style/nav.css);
+@import url(../style/shop-page.css);
 /* hero banner css start */
 #hero{
     background-color: var(--bg-color);
@@ -191,6 +192,9 @@
 }
 .product-txt span{
     color: var(--light-txt-color);
+}
+.product-txt h5{
+    font-size: 1.1rem;
 }
 .right-arrow{
     top: 35%;

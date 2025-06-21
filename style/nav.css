@@ -2,7 +2,7 @@ nav{
     background-color: var(--bg-color);
 }
 .nav-bar{
-    width: 92%;
+    width: 90%;
     height: 5.625rem;
     margin: auto;
     display: flex;
