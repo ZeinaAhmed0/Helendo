@@ -130,6 +130,9 @@
 }
 /* banner box css end */
 /* products css start */
+.products-content{
+    position: relative;
+}
 .products-navbar-content a{
     color: var(--txt-color);
     font-size: 1rem;
@@ -154,6 +157,9 @@
     opacity: 0;
     visibility: hidden;
     overflow: hidden;
+}
+.product-card{
+    position: relative;
 }
 .product-card:hover .icons-bg{
     opacity: 1;
@@ -260,7 +266,8 @@
 }
 .products-img img{
     width: 100%;
-    height: 100%;
+    height: fit-content;
+    object-fit: cover;
 }
 .product-txt span{
     color: var(--light-txt-color);
@@ -270,15 +277,45 @@
 }
 .right-arrow{
     top: 35%;
-    right: 0%;
+    right: 0;
 }
 .left-arrow{
     top: 35%;
-    left: 0%;
+    left: 0;
+}
+.discount::after{
+    content: "-14%";
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+    width: 4rem;
+    height: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: orangered;
+}
+.stock::after{
+    content: "out of stock";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .4rem;
+    margin: 1rem;
+    width: 7rem;
+    height: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: black;
+    text-transform: capitalize;
 }
 /* products css end */
 /* popup css start */
-.popup{
+.popup , .best-selling-popup{
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -299,7 +336,7 @@
     visibility: visible;
     opacity: 1;
 }
-.popup-container{
+.popup-container , .best-selling-popup-container{
     position: relative;
     width: 80%;
     height: 70vh;
@@ -337,7 +374,7 @@
     gap: .5rem;
     position: relative;
 }
-.popup-cursor{
+.popup-cursor , .best-selling-popup-cursor{
     border-radius: 50%;
     position: absolute;
     padding: auto;
@@ -350,8 +387,8 @@
     padding: 2rem;
     cursor: pointer;
 }
-.popup-cursor i{
-    font-size: 2rem;
+.popup-cursor i , .best-selling-popup-cursor i{
+    font-size: 1.5rem;
 }
 .popup-content h3{
     font-weight: 600;
@@ -520,8 +557,10 @@
     position: relative;
     transition: .4s linear;
 }
-.latest-card:hover::after{
-    content: "read more +";
+.read-more{
+    transition: .4s linear;
+}
+.latest-card .read-more{
     position: absolute;
     display: flex;
     align-items: center;
@@ -533,30 +572,44 @@
     height: 2.5rem;
     padding: .5rem;
     background-color: white;
-    bottom: 37%;
-    right: 0;
+    bottom: 0;
+    right: -1rem;
     z-index: 10;
     cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+.latest-card:hover .read-more{
+    opacity: 1;
+    visibility: visible;
+    right: 0;
 }
 .latest-txt p a{
     font-weight: 500;
     font-size: 1.2rem;
 }
+.line-after{
+    background-color: var(--light-txt-color);
+    width: 4rem;
+    height: .12rem;
+    position: relative;
+    transition: .4s linear;
+}
 .line-after::after{
     content: "";
     position: absolute;
-    background-color: var(--light-txt-color);
-    width: 6rem;
-    height: .15rem;
-}
-.latest-card:hover .line-after::before{
-    content: "";
-    position: absolute;
     background-color: var(--hover-color);
-    width: 6rem;
-    height: .15rem;
-    z-index: 20;
+    width: 4rem;
+    height: .12rem;
+    left: -3rem;
+    visibility: hidden;
+    opacity: 0;
     transition: .4s linear;
+}
+.latest-card:hover .line-after::after{
+    left: 0;
+    visibility: visible;
+    opacity: 1;
 }
 .latest-txt span{
     font-weight: 500;
@@ -584,6 +637,8 @@
 .logo-box:hover img{
     opacity: 1;
 }
+/* latest css end */
+/*footer css start */
 footer{
     width: 100%;
     overflow: hidden;
@@ -618,13 +673,14 @@ footer i{
     color: var(--txt-color);
     opacity: .9;
 }
-footer span span{
+footer .security span , footer span span{
     transition: .4s;
+    cursor: pointer;
 }
-footer span span:hover{
-    color: var(--hover-color);
+footer .security span:hover , footer span span:hover, footer .col-2 a:hover{
+    color: var(--hover-color) !important;
 }
-/* latest css end */
+/* footer css end */
 /* media query start */
 @media (max-width:1024px){
     .hero-banner-content{
