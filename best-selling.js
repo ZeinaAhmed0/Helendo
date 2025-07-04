@@ -123,8 +123,9 @@ function getBestSellingProductCategory() {
     let CategoryBestSellingNav = document.querySelector(".best-selling-nav")
     let html = ``
     uniqueCategoriesObj.forEach(ele => {
-        html += `<li class="nav-item">
+        html += `<li class="nav-item d-flex align-items-center justify-content-center">
     <a class="nav-link ${ele.value === bestSellingCategoryType? "active" : ""}"data-value ="${ele.value}" >${ele.value}</a>
+    <span>${uniqueCategoriesObj.length -1 == uniqueCategoriesObj.indexOf(ele)? "" : "|"}</span>
     </li>`
     });
     CategoryBestSellingNav.innerHTML = html

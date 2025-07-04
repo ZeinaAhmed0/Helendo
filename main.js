@@ -46,8 +46,7 @@ const products = [
         rate:3,
         category :["decoration","accessories","furniture"],
         image: "./assets/imges/1_4-300x300.webp"
-    },
-    /*
+    },/*
     {
         id : 5,
         title : "living room & bedroom lights",
@@ -95,8 +94,7 @@ const products = [
         rate:5,
         category : ["furniture","table"],
         image:"./assets/imges/1_8-300x300.webp"
-    }
-    */
+    } */
 ]
 let categoryType = "all products"
 function handleCategories() {
@@ -124,8 +122,9 @@ function getProductCategory() {
     let CategoryNav = document.querySelector(".nav")
     let html = ``
     uniqueCategoriesObj.forEach(ele => {
-        html += `<li class="nav-item">
+        html += `<li class="nav-item d-flex align-items-center justify-content-center">
     <a class="nav-link ${ele.value === categoryType? "active" : ""}"data-value ="${ele.value}" >${ele.value}</a>
+    <span>${uniqueCategoriesObj.length -1 == uniqueCategoriesObj.indexOf(ele)? "" : "|"}</span>
     </li>`
     });
     CategoryNav.innerHTML = html
@@ -144,26 +143,25 @@ const productsContainer = document.querySelector(".products-container")
 function handleProducts(products) {
     let html = ``
     products.forEach((ele)=>{
-        html += `<div class=" d-flex align-items-center justify-content-between">
-            <div class="product-card ${ele.isDiscount? "discount":""} ${ele.isOutOfStock?"stock":""}">
-                <div class="icons-bg">
-                    <div class="icon-box">
-                        <div class="icon view" onclick="showPopup(${ele.id})"><i class="fas fa-plus"><a href="#"></a></i></div>
-                        <div class="icon cart"><i class="fas fa-cart-plus"><a href="#"></a></i></div>
-                        <div class="icon wishlist"><i class="fas fa-heart"><a href="#"></a></i></div>
-                    </div>
+        html += ` <div class="d-flex align-items-center justify-content-between">
+        <div class="product-card ${ele.isDiscount? "discount":""} ${ele.isOutOfStock?"stock":""}">
+            <div class="icons-bg">
+                <div class="icon-box">
+                    <div class="icon view" onclick="showPopup(${ele.id})"><i class="fas fa-plus"><a href="#"></a></i></div>
+                    <div class="icon cart"><i class="fas fa-cart-plus"><a href="#"></a></i></div>
+                    <div class="icon wishlist"><i class="fas fa-heart"><a href="#"></a></i></div>
                 </div>
-                <div class="products-img">
-                    <img src="${ele.image}" alt="teapot">
-                </div>
-                <div class="product-txt pt-2 d-flex flex-column align-items-center justify-content-center">
-                    <h5>${ele.title}</h5>
-                    <span>${ele.price.map((price)=> `<span>${ele.price.indexOf(price) == ele.price.length -1? "AE" + price : "AE" + price + "-"}</span>`).join("")}</span>
-                </div>
-                <span class=""></span>
+            </div>
+            <div class="products-img">
+                <img src="${ele.image}" alt="teapot">
+            </div>
+            <div class="product-txt pt-2 d-flex flex-column align-items-center justify-content-center">
+                <h5>${ele.title}</h5>
+                <span>${ele.price.map((price)=> `<span>${ele.price.indexOf(price) == ele.price.length -1? "AE" + price : "AE" + price + "-"}</span>`).join("")}</span>
             </div>
         </div>
-        </div>`
+    </div>
+    </div> `
     productsContainer.innerHTML = html
     })
 }

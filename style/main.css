@@ -6,23 +6,24 @@
 /* hero banner css start */
 #hero{
     background-color: var(--bg-color);
-    padding-top: 5rem;
     position: relative;
+    padding-bottom: 20rem;
 }
 .hero-banner-content{
     width: 90%;
     margin: auto;
-    gap: 5rem;
+    gap: 3rem;
 }
 .hero-banner-content .hero-banner-txt{
     gap: 3rem;
     height: fit-content;
+    width: 50%;
 }
 .hero-banner-txt .collection::before{
     content: "";
     position: absolute;
     width: 0.125rem;
-    height: 100%;
+    height: 80%;
     left: 0;
     background-color: var(--light-txt-color);
 }
@@ -53,27 +54,39 @@
     color: var(--hover-color) !important;
 }
 .hero-banner-img{
-    height: 50rem;
+    width: 50%;
     z-index: 2;
-}
-.hero-banner-img .chair-img{
-    top: 8rem;
-    left: 8rem;
-    z-index: 1;
+    height: 35rem;
 }
 .hero-banner-img .bg-img{
-    top: 0;
-    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+.hero-banner-img .chair-img{
+    width: 100%;
+    height: 100%;
+    bottom: -5rem;
+}
+.chair-img img , .bg-img img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+.back , .next{
+    position: absolute;
+    top: 35%;
+    cursor: pointer !important;
+    z-index: 100;
 }
 .back{
-    left: -4rem;
-    font-size: 3.25rem;
-    top: 35%;
+    left: 0;
 }
 .next{
-    right: -4rem;
-    font-size: 3.25rem;
-    top: 35%;
+    right: 0;
+}
+.back img, .next img{
+    width: 3rem;
+    height: 3rem;
 }
 /* hero banner css end */
 /* banner box css start */
@@ -98,9 +111,11 @@
 }
 .first-box{
     padding-left: 2rem !important;
+    position: relative;
 }
 .second-box{
     padding-right: 2rem !important;
+    position: relative;
 }
 .banner-box-txt{
     top: 0;
@@ -121,12 +136,13 @@
 }
 .banner-btn img{
     width: 1.125rem;
+    height: 1.125rem;
 }
 .banner-box-txt h3 a:hover{
     color: var(--hover-color);
 }
 .banner-card:hover .banner-btn img ,.banner-card:hover .banner-btn a{
-    opacity: .7;
+    opacity: .6;
 }
 /* banner box css end */
 /* products css start */
@@ -140,6 +156,10 @@
 .nav-item a{
     color: var(--txt-color);
     font-family: roboto-medium;
+}
+.nav-item span{
+    font-size: 1rem;
+    font-weight: 100;
 }
 .nav-item .active{
     color: var(--light-txt-color) !important;
@@ -632,7 +652,7 @@
     object-fit: contain;
     scale: 1.6;
     opacity: .5;
-    transition: .4s;
+    transition: .3s;
 }
 .logo-box:hover img{
     opacity: 1;
@@ -689,102 +709,180 @@ footer .security span:hover , footer span span:hover, footer .col-2 a:hover{
     .hero-banner-txt h1{
         font-size: 3rem;
     }
-    .hero-banner-img{
-        height: 40rem;
-    }
-    .hero-banner-img .chair-img{
-        top: 5rem;
-        left: 5rem;
-        z-index: 1;
-    }
-    .hero-banner-img .bg-img img{
-        width: 30rem !important;
-        height: 30rem !important;
-    }
-    .back{
-        left: 0rem;
-        top: 30%;
-    }
-    .next{
-        right: 0rem;
-        top: 30%;
-        z-index: 3;
-    }
     #banner-box{
         position: relative;
         top: 0;
         margin: 0 !important;
     }
 }
-@media (max-width:768px){
+@media (max-width:900px){
+    #hero{
+        padding-bottom: 5rem;
+    }
     .hero-banner-content{
         gap: 0;
     }
-    .hero-banner-txt{
+    .hero-banner-content .hero-banner-txt{
         z-index: 10;
-    }
-    .hero-banner-img .chair-img img{
-        width: 20rem;
-        height: 26rem;
+        gap: 1rem;
     }
     .hero-banner-img{
-        left: -6rem;
+        width: 50%;
+        z-index: 2;
+        height: 35rem;
+    }
+    .hero-banner-img .bg-img{
+        width: 30rem;
+        height: 100%;
+    }
+    .hero-banner-img .chair-img{
+        width: 100%;
+        height: 100%;
+        bottom: -5rem;
     }
     #banner-box .container-md{
-        padding: 0 !important;
+        width: 100% !important;
+        top: 0;
+        max-width:unset !important;
+        height: fit-content;
+        padding-bottom: 5rem;
+    }
+    #products .container-md, #latest .container-md{
+        width: 90% !important;
         margin: auto !important;
+        max-width: unset !important;
+    }
+    #products .col-lg-3{
+        text-align: center;
+    }
+    .interior-collection-txt{
+        padding: 2rem;
+    }
+    #best-selling .col-lg-3{
+        text-align: center;
+    }
+    #best-selling .container-md{
+        width: 95% !important;
+        margin: auto !important;
+        max-width: unset !important;
+    }
+    .interior-collection-txt h1{
+        font-size: 2.5rem;
+    }
+    .logo-box img{
+        scale: 2.2;
     }
 }
-@media (max-width:425px) {
+@media (max-width:428px) {
     html{
         font-size: 12px;
     }
-    .hero-banner-img{
-        left: -20rem;
+    .hero-banner-content{
+        position: relative;
+        
     }
-    .hero-banner-img .bg-img img{
-        width: 27rem !important;
-        height: 27rem !important;
+    .hero-banner-content .hero-banner-txt{
+        z-index: 5;
+        position: absolute;
+        width: 100%;
+        left: 0;
+    }
+    .hero-banner-content .hero-banner-img{
+        width: 100%;
+    }
+    .hero-banner-img .bg-img{
+        position: absolute;
+        width: 25rem;
+        height: 100%;
+        right: 0;
     }
     .hero-banner-img .chair-img{
-        left: 10rem;
-        top: 4rem;
+        right: -3rem;
     }
-    .hero-banner-img .chair-img img{
-        width: 16.583rem;
-        height: 24rem;
-    }
-    .banner-box-content{
-        margin: 0 !important;
-    }
-    .first-box{
+    .first-box, .second-box{
         padding: 2rem !important;
-        padding-bottom: 0 !important;
     }
-    .second-box{
-        padding: 2rem !important;
-        position: relative;
+    #products .container-md{
+        width: 100% !important;
+        margin: auto !important;
+        max-width: unset !important;
     }
-    .banner-box-txt a{
-        font-size: 2.5rem;
+    .product-card{
+        width: 100% !important;
+        max-width: unset !important;
     }
-    .banner-box-txt h6{
+    .products-img{
+        width: 30rem;
+        height: 30rem;
+        margin: auto;
+    }
+    .icons-bg{
+        width: 30rem;
+        height: 30rem;
+        padding: 0;
+        margin: auto;
+    }
+    .product-card:hover .icon-box{
+        bottom: 42%;
+    }
+    .icon-box .icon{
+        color: black;
+        width: 4.2rem;
+        height: 4.2rem;
+        font-size: 1.5rem;
+    }
+    .wishlist::after, .view::after, .cart::after{
+        height: 2rem;
+        font-size: 1.5rem;
+        width: max-content;
+        padding: .4rem;
+    }
+    .discount::after{
+        width: 6rem;
+        height: 2.5rem;
         font-size: 1.6rem;
     }
-    .banner-btn a{
-        font-size: 1.4rem;
+    .stock::after{
+        width: 9rem;
+        height: 2.6rem;
+        font-size: 1.2rem;
     }
-}
-@media (max-width:375px) {
-    html{
-        font-size: 10px;
+    #best-selling .best-selling{
+        justify-content: center !important;
     }
-    .hero-banner-img{
-        left: -20rem;
+    #interior-collection{
+        overflow: unset;
     }
-}
-@media (max-width:320px) {
-    .hero-banner-img{
-        left: -25rem;
+    .interior-collection-txt{
+        padding-top: 0;
+    }
+    .interior-collection-txt h1{
+        font-size: 1.5rem;
+    }
+    .interior-collection-txt p{
+        font-size: .8rem;
+        margin: 0;
+        padding: 0;
+    }
+    .interior-collection-txt .discover{
+        margin: 0;
+        padding: 0;
+    }
+    .latest-card .read-more{
+        font-size: 1.5rem;
+        width: 10rem;
+        height: 4rem;
+    }
+    .latest-card .line-after{
+        width: 6rem;
+    }
+    .line-after::after{
+        width: 6rem;
+    }
+    .logo-box img{
+        scale: 1.5;
+    }
+    .logo-box3, .logo-box4, .logo-box5, #brands .left-arrow, #brands .right-arrow{
+        display: none;
     }
 }

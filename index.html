@@ -11,6 +11,8 @@
     integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <!--font awesome cdn-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--swiper cdn-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
     <!--nav start-->
@@ -22,7 +24,7 @@
             <div class="nav-list">
                 <ul>
                     <li><a href="#">home</a></li>
-                    <li><a href="#">shop</a></li>
+                    <li><a href="./shop-page.html">shop</a></li>
                     <li><a href="#">pages</a></li>
                     <li><a href="#">blog</a></li>
                 </ul>
@@ -37,47 +39,79 @@
     </nav>
     <!--nav end-->
     <!--hero banner start-->
-    <main>
-        <section id="hero">
-            <div class="container-fluid">
-                <div class="row align-items-center g-2">
-                    <div class="col-lg-12">
-                        <div class="hero-banner-content  position-relative d-flex">
-                            <div class="back position-absolute">
-                                <i class="fa-solid fa-chevron-left"></i>
+    <section id="hero">
+        <div class="container-fluid overflow-hidden pt-5">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide">
+            <div class="row align-items-center g-2">
+                <div class="col-lg-12">
+                    <div class="hero-banner-content  position-relative d-flex align-items-center justify-content-center">
+                        <div class="hero-banner-txt d-flex flex-column">
+                            <div class="collection position-relative">
+                                <p>chair <br> collection <br> 2022</p>
                             </div>
-                            <div class="hero-banner-txt d-flex flex-column">
-                                <div class="collection position-relative">
-                                    <p>chair <br> collection <br> 2022</p>
-                                </div>
-                                <h1>chanel chair <br> high quality walnut</h1>
-                                <div class="discover">
-                                    <a href="#">discover collection <img src="./assets/imges/right-arrow-svgrepo-com.svg" alt="right arrow"></a>
-                                </div>
+                            <h1>chanel chair <br> high quality walnut</h1>
+                            <div class="discover">
+                                <a href="#">discover collection <img src="./assets/imges/right-arrow-svgrepo-com.svg" alt="right arrow"></a>
                             </div>
-                            <div class="hero-banner-img position-relative t-0">
+                        </div>
+                        <div class="hero-banner-img position-relative">
+                            <div class="bg-img">
+                                <img src="./assets/imges/home-full-width-2.webp" alt="circle">
                                 <div class="chair-img position-absolute">
                                     <img src="./assets/imges/home-full-width-4.webp" alt="chair">
                                 </div>
-                                <div class="bg-img position-absolute">
-                                    <img src="./assets/imges/home-full-width-2.webp" alt="bg-img">
-                                </div>
                             </div>
-                            <div class="next position-absolute">
-                                <i class="fa-solid fa-chevron-right"></i>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+                </div>
+                <div class="swiper-slide">
+                    <div class="row align-items-center g-2">
+                <div class="col-lg-12">
+                    <div class="hero-banner-content  position-relative d-flex align-items-center justify-content-center">
+                        <div class="hero-banner-txt d-flex flex-column">
+                            <div class="collection position-relative">
+                                <p>chair <br> collection <br> 2022</p>
+                            </div>
+                            <h1>flower vase <br> made of ceramic</h1>
+                            <div class="discover">
+                                <a href="#">discover collection <img src="./assets/imges/right-arrow-svgrepo-com.svg" alt="right arrow"></a>
+                            </div>
+                        </div>
+                        <div class="hero-banner-img position-relative">
+                            <div class="bg-img">
+                                <img src="./assets/imges/home-full-width-2.webp" alt="circle">
+                                <div class="chair-img position-absolute">
+                                    <img src="./assets/imges/home-full-width-1.webp" alt="chair">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+                </div>
+                </div>
+                <div class="back">
+                    <img src="./assets/imges/arrow-left-svgrepo-com.svg" alt="arrow">
+                </div>
+                <div class="next">
+                    <img src="./assets/imges/arrow-right-svgrepo-com.svg" alt="arrow">
+                </div>
+            </div>
+        </div>
+    </section>
     <!--hero banner end-->
     <!--banner box start-->
     <section id="banner-box">
         <div class="container-md banner-box-content">
             <div class="row d-flex">
-                <div class="col-lg-6 col-md-6 banner-card first-box">
+                <div class="col-12 col-md-6 banner-card first-box">
                     <div class="banner-box-img">
                         <img src="./assets/imges/bn-hf-1-570x340.webp" alt="table">
                             <div class="banner-box-txt position-absolute d-flex flex-column gap-1 first-txt-box">
@@ -89,7 +123,7 @@
                             </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 banner-card second-box">
+                <div class="col-12 col-md-6 banner-card second-box">
                     <div class="banner-box-img">
                         <img src="./assets/imges/bn-hf-2-570x340.webp" alt="table">
                         <div class="banner-box-txt position-absolute d-flex flex-column gap-1 second-txt-box">
@@ -110,13 +144,13 @@
         <div class="popup-container overflow-hidden"></div>
     </section>
     <section id="products">
-    <div class="container-md">
+    <div class="container-md overflow-hidden">
         <div class="products-navbar position-relative">
             <div class="row products-navbar-content">
-                <div class="col-3">
+                <div class="col-lg-3 col-12">
                         <h3>New products</h3>
                 </div>
-                <div class="col-9">
+                <div class="col-lg-9 col-12">
                     <ul class="nav justify-content-lg-end justify-content-center align-items-center"></ul>
                 </div>
             </div>
@@ -125,7 +159,9 @@
     <div class="container-md mt-5 d-flex align-items-center justify-content-center position-relative">
         <div class="left-arrow position-absolute"><i class="fas fa-arrow-left-long"></i></div>
         <div class="products-content row pb-5 justify-content-between flex-wrap">
-            <div class="products-container col-12 d-flex align-items-center justify-content-center gap-3 overflow-hidden"></div>
+            <div class="products-container col-12 d-flex align-items-center justify-content-center gap-3 flex-wrap">
+                    
+                </div>
         </div>
         <div class="right-arrow position-absolute"><i class="fas fa-arrow-right-long"></i></div>
     </div>
@@ -151,14 +187,14 @@
     <section class="best-selling-popup">
         <div class="best-selling-popup-container overflow-hidden"></div>
     </section>
-    <section id="best selling">
+    <section id="best-selling">
         <div class="container-md">
             <div class="products-navbar position-relative">
                 <div class="row products-navbar-content">
-                    <div class="col-3">
+                    <div class="col-lg-3 col-12">
                             <h3>best selling</h3>
                     </div>
-                    <div class="col-9">
+                    <div class="col-lg-9 col-12">
                         <ul class="nav best-selling-nav justify-content-lg-end justify-content-center align-items-center"></ul>
                     </div>
                 </div>
@@ -167,7 +203,7 @@
         <div class="container-md mt-5">
             <div class="products-content">
                 <div class="row">
-                    <div class="products-container best-selling col-12 flex-wrap d-flex align-items-center justify-content-center gap-3 overflow-hidden"></div>
+                    <div class="products-container best-selling col-12 flex-wrap d-flex align-items-center justify-content-start gap-3 overflow-hidden"></div>
                 </div>
             </div>
         </div>
@@ -183,14 +219,14 @@
                     </div>
                     <div class="col-3">
                         <div class="discover">
-                            <a href="#">discover collection <img src="./assets/imges/right-arrow-svgrepo-com.svg" alt="right arrow"></a>
+                            <a href="#">discover now <img src="./assets/imges/right-arrow-svgrepo-com.svg" alt="right arrow"></a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="latest-content">
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 latest-card d-flex flex-column align-items-center justify-content-start gap-2">
+                    <div class="col-lg-4 col-md-6 cool-12 latest-card d-flex flex-column align-items-center justify-content-start gap-2">
                         <div class="latest-img">
                             <img src="./assets/imges/8-570x370.webp" alt="design">
                             <span class="read-more">read more +</span>
@@ -201,7 +237,7 @@
                             <p class="d-flex gap-2 align-items-center justify-content-start pt-3"><span class="date">october 15, 2024</span> <span class="color-txt">/</span> <span>hastheme</span><span class="color-txt"> / </span><span><span class="color-txt">in</span> chair</span></p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 latest-card d-flex flex-column align-items-center justify-content-start gap-2">
+                    <div class="col-lg-4 col-md-6 col-12 latest-card d-flex flex-column align-items-center justify-content-start gap-2">
                         <div class="latest-img">
                             <img src="./assets/imges/9-570x370.webp" alt="design">
                             <span class="read-more">read more +</span>
@@ -212,7 +248,7 @@
                             <p class="d-flex gap-2 align-items-center justify-content-start pt-3"><span class="date">october 15, 2024</span> <span class="color-txt">/</span> <span>hastheme</span><span class="color-txt"> / </span><span><span class="color-txt">in</span> chair</span></p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 latest-card d-flex flex-column align-items-center justify-content-start gap-2">
+                    <div class="col-lg-4 col-md-6 col-12 latest-card d-flex flex-column align-items-center justify-content-start gap-2">
                         <div class="latest-img">
                             <img src="./assets/imges/10-570x370.webp" alt="design">
                             <span class="read-more">read more +</span>
@@ -235,19 +271,19 @@
                 <i class="fas fa-arrow-left-long"></i>
             </div>
             <div class="brand-content d-flex align-items-center justify-content-between">
-                <div class="logo-box mx-5">
+                <div class="logo-box logo-box1 mx-5">
                     <a href="#"><img src="./assets/imges/partner1.webp" alt="brand logo"></a>
                 </div>
-                <div class="logo-box mx-5">
+                <div class="logo-box logo-box2 mx-5">
                     <a href="#"><img src="./assets/imges/partner2.webp" alt="brand logo"></a>
                 </div>
-                <div class="logo-box mx-5">
+                <div class="logo-box logo-box3 mx-5">
                     <a href="#"><img src="./assets/imges/partner3.webp" alt="brand logo"></a>
                 </div>
-                <div class="logo-box mx-5">
+                <div class="logo-box logo-box4 mx-5">
                     <a href="#"><img src="./assets/imges/partner4.webp" alt="brand logo"></a>
                 </div>
-                <div class="logo-box mx-5">
+                <div class="logo-box logo-box5 mx-5">
                     <a href="#"><img src="./assets/imges/partner5.webp" alt="brand logo"></a>
                 </div>
             </div>
@@ -260,7 +296,7 @@
     <!--footer start-->
     <footer>
         <div class="row d-flex align-items-start justify-content-start g-2">
-            <div class="col-3 d-flex flex-column gap-2 mb-5">
+            <div class="col-md-3 col-12 d-flex flex-column gap-2 mb-5">
                 <h3>helendo</h3>
                 <div class="location d-flex align-items-center justify-content-start gap-3">
                     <i class="fas fa-location-dot"></i>
@@ -276,18 +312,18 @@
                     <i class="fab fa-tumblr"></i>
                 </div>
             </div>
-            <div class="col-2 d-flex flex-column gap-2">
+            <div class="col-md-2 col-12 d-flex flex-column gap-2">
                 <h5>quick link</h5>
                 <a href="#">about as</a>
                 <a href="#">what we do</a>
                 <a href="#">FAG page</a>
                 <a href="#">contact us</a>
             </div>
-            <div class="col-2 d-flex flex-column gap-2">
+            <div class="col-md-2 col-12 d-flex flex-column gap-2">
                 <h5>instagram</h5>
             </div>
-            <div class="col-2"></div>
-            <div class="col-3 d-flex flex-column justify-content-end align-items-start gap-2">
+            <div class="col-md-2 col-0"></div>
+            <div class="col-md-3 col-12 d-flex flex-column justify-content-end align-items-start gap-2">
                 <h5>newsletter</h5>
                 <div class="address d-flex align-items-center justify-content-between gap-5">
                     <span>your email address</span>
@@ -310,5 +346,22 @@
     crossorigin="anonymous"></script>
     <script src="./main.js"></script>
     <script src="./best-selling.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".next",
+            prevEl: ".back",
+        },
+        });
+    </script>
 </body>
 </html>
