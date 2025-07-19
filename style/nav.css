@@ -29,12 +29,10 @@ nav{
     justify-content: space-between;
     gap: 1.625rem;
 }
-.nav-bar .nav-icons i{
-    font-size: 1.625rem;
+.nav-bar .nav-icons img{
+    width: 1.825rem;
+    height: 1.625rem;
     transition: .4s;
-}
-.nav-bar .nav-icons i:hover{
-    color: var(--hover-color);
 }
 @media (max-width:768px) {
     html{

@@ -209,14 +209,19 @@
     position: relative;
     cursor: pointer;
 }
+.icon img{
+    width: 2rem;
+    height: 2rem;
+}
 .view::after{
     content: "quick view";
     position: absolute;
     width: max-content;
     height: 1.3rem;
-    padding: .3rem;
+    padding: .4rem;
     background-color: black;
     color: white;
+    border-radius: .3rem;
     font-size: .8rem;
     margin-bottom: .5rem;
     display: flex;
@@ -245,9 +250,10 @@
     position: absolute;
     width: max-content;
     height: 1.3rem;
-    padding: .3rem;
+    padding: .4rem;
     background-color: black;
     color: white;
+    border-radius: .3rem;
     font-size: .8rem;
     margin-bottom: .5rem;
     display: flex;
@@ -263,9 +269,10 @@
     position: absolute;
     width: max-content;
     height: 1.3rem;
-    padding: .3rem;
+    padding: .4rem;
     background-color: black;
     color: white;
+    border-radius: .3rem;
     font-size: .8rem;
     margin-bottom: .5rem;
     display: flex;

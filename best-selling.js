@@ -98,7 +98,7 @@ const bestSellingProducts =[
 ]
 
 // best selling products
-let bestSellingCategoryType = "all products]"
+let bestSellingCategoryType = "all products"
 function handleBestSellingCategories() {
     if (bestSellingCategoryType == "all products") {
         handleBestSellingProducts(bestSellingProducts)

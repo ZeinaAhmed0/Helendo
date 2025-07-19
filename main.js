@@ -142,14 +142,14 @@ getProductCategory()
 const productsContainer = document.querySelector(".products-container")
 function handleProducts(products) {
     let html = ``
-    products.forEach((ele)=>{
+    products.forEach((ele, index)=>{
         html += ` <div class="d-flex align-items-center justify-content-between">
         <div class="product-card ${ele.isDiscount? "discount":""} ${ele.isOutOfStock?"stock":""}">
             <div class="icons-bg">
                 <div class="icon-box">
                     <div class="icon view" onclick="showPopup(${ele.id})"><i class="fas fa-plus"><a href="#"></a></i></div>
-                    <div class="icon cart"><i class="fas fa-cart-plus"><a href="#"></a></i></div>
-                    <div class="icon wishlist"><i class="fas fa-heart"><a href="#"></a></i></div>
+                    <div class="icon cart"  onclick="addToCart(${index})"><i class="fas fa-cart-plus"><a href="#"></a></i></div>
+                    <div class="icon wishlist"  onclick="wishList(${index})"><img src="./assets/imges/heart-svgrepo-com.svg"><a href="#"></a></div>
                 </div>
             </div>
             <div class="products-img">
